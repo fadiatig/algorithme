@@ -1,0 +1,26 @@
+
+var 
+ch:char;
+nb,V,i,j,binteger
+Begin
+
+ REPEAT 
+  write("ch=")
+  read(ch)
+  b:=length(ch)
+ UNTIL (ch[b-1]="." and ch[0] != "" and ch[b-2] !="")
+  c:=length(ch)
+  nb=1
+  v=0
+  for i from 0 to (c-1) do 
+    if (ch[i]="") then 
+       nb=nb+1
+    endif
+  for j from 0 to (c-1)
+    if ch[i] in ("a","e","i","o","u","y") then 
+      v=v+1
+    endif
+  write("The length of the sentence:",c)
+  write("The number of words in the sentence:",nb)
+  write("The number of vowels in the sentence:",v)
+End
